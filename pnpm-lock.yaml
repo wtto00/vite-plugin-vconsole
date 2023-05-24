@@ -7,9 +7,6 @@ optionalDependencies:
   eslint-config-google:
     specifier: ^0.14.0
     version: 0.14.0(eslint@8.41.0)
-  husky:
-    specifier: ^8.0.3
-    version: 8.0.3
   lint-staged:
     specifier: ^13.2.2
     version: 13.2.2
@@ -27,6 +24,9 @@ devDependencies:
   '@rollup/plugin-node-resolve':
     specifier: ^15.0.2
     version: 15.0.2(rollup@3.23.0)
+  husky:
+    specifier: ^8.0.3
+    version: 8.0.3
   resize-observer-polyfill:
     specifier: ^1.5.1
     version: 1.5.1
@@ -1132,8 +1132,7 @@ packages:
     engines: {node: '>=14'}
     hasBin: true
     requiresBuild: true
-    dev: false
-    optional: true
+    dev: true
 
   /ignore@5.2.4:
     resolution:
