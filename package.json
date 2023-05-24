@@ -1,0 +1,68 @@
+{
+  "name": "@wtto00/vite-plugin-vconsole",
+  "version": "1.0.0",
+  "description": "vite plugin vconsole",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "types": "./types/index.d.ts",
+  "module": "./dist/index.mjs",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "format": "prettier . --write --ignore-unknown",
+    "lint": "eslint --fix --color src rollup.config.js",
+    "prepare": "husky install && husky set .husky/pre-commit \"npx lint-staged\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wtto00/vite-plugin-vconsole.git"
+  },
+  "keywords": [
+    "vite",
+    "vconsole"
+  ],
+  "author": "wtto00 <wtto00@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wtto00/vite-plugin-vconsole/issues"
+  },
+  "homepage": "https://github.com/wtto00/vite-plugin-vconsole#readme",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "resize-observer-polyfill": "^1.5.1",
+    "rimraf": "^5.0.1",
+    "rollup": "^3.23.0",
+    "vconsole": "^3.15.0",
+    "vite": "^4.3.8"
+  },
+  "peerDependencies": {
+    "vite": "^4.3.8"
+  },
+  "optionalDependencies": {
+    "eslint": "^8.41.0",
+    "eslint-config-google": "^0.14.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{js}": [
+      "eslint --fix --cache"
+    ]
+  }
+}
