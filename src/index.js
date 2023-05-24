@@ -24,7 +24,7 @@ const parseVConsoleOptions = (config) =>
 export function viteVConsole(opt) {
   let viteConfig;
   let isDev = false;
-  const {entry, enabled = true, localEnabled = false, config = {}} = opt;
+  const {entry, enabled = true, localEnabled = false, resizeObserverPolyfill = false, config = {}} = opt;
 
   // Compatible to solve the windows path problem
   let entryPath = Array.isArray(entry) ? entry : [entry];
@@ -44,6 +44,7 @@ export function viteVConsole(opt) {
       if (entryPath.includes(id) && enabledTruly) {
         const code =
           '/* eslint-disable */;' +
+          (resizeObserverPolyfill ? `import '${name}/dist/resizeObserverPolyfill';` : '') +
           `import '${name}/dist/vconsole';` +
           `new VConsole({${parseVConsoleOptions(config)}});` +
           '/* eslint-enable */' +

@@ -15,6 +15,8 @@
 - 🌟 内置 `vconsole`，无需额外安装
 - 🌟 内置 `resize-observer-polyfill`，兼容 `iOS12` 等旧浏览器。
 
+> `resize-observer-polyfill` 需要传入参数 `resizeObserverPolyfill:true` 开启加载
+
 ## 安装
 
 **node version:** >=12.0.0
@@ -136,12 +138,18 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
 
 ## 配置
 
-| 配置项       | 类型                                                                                                                 | 是否必须 | 默认值 | 说明                                                          |
-| ------------ | -------------------------------------------------------------------------------------------------------------------- | -------- | ------ | ------------------------------------------------------------- |
-| entry        | `string \| string[]`                                                                                                 | 是       | -      | 必须提供，支持多入口                                          |
-| localEnabled | `boolean`                                                                                                            | 否       | false  |                                                               |
-| enabled      | `boolean`                                                                                                            | 否       | true   |                                                               |
-| config       | [`VConsoleOptions`](https://github.com/Tencent/vConsole/blob/dev/doc/public_properties_methods_CN.md#vconsoleoption) | 否       | {}     | 传递给 [vconsole](https://github.com/Tencent/vConsole) 的属性 |
+| 配置项                 | 类型                                                                                                                 | 是否必须 | 默认值 | 说明                                                          |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------------- | -------- | ------ | ------------------------------------------------------------- |
+| entry                  | `string \| string[]`                                                                                                 | 是       | -      | 必须提供，支持多入口                                          |
+| localEnabled           | `boolean`                                                                                                            | 否       | false  | 开发环境下是否启用                                            |
+| enabled                | `boolean`                                                                                                            | 否       | true   | 打包环境下是否启用                                            |
+| resizeObserverPolyfill | `boolean`                                                                                                            | 否       | false  | 是否加载 `resize-observer-polyfill` 以适配低版本浏览器        |
+| config                 | [`VConsoleOptions`](https://github.com/Tencent/vConsole/blob/dev/doc/public_properties_methods_CN.md#vconsoleoption) | 否       | {}     | 传递给 [vconsole](https://github.com/Tencent/vConsole) 的属性 |
+
+- `开发环境`: 是指 `command==='serve'`
+- `打包环境`: 是指 `command==='build'`
+- `command` 详见 [vite 情景配置
+  ](https://cn.vitejs.dev/config/#conditional-config)
 
 ## License
 

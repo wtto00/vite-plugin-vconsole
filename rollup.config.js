@@ -20,6 +20,14 @@ const config = [
       format: 'iife',
     },
   },
+  {
+    plugins: [resolve()],
+    input: 'src/resizeObserverPolyfill.js',
+    output: {
+      file: 'dist/resizeObserverPolyfill.js',
+      format: 'iife',
+    },
+  },
 ];
 
 export default config;
