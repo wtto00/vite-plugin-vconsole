@@ -41,6 +41,8 @@
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
     "resize-observer-polyfill": "^1.5.1",
     "rimraf": "^5.0.1",
     "rollup": "^3.23.0",
@@ -53,8 +55,6 @@
   "optionalDependencies": {
     "eslint": "^8.41.0",
     "eslint-config-google": "^0.14.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.2.2",
     "prettier": "^2.8.8"
   },
   "lint-staged": {
