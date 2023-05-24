@@ -1,6 +1,6 @@
 {
   "name": "@wtto00/vite-plugin-vconsole",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "vite plugin vconsole",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -42,7 +42,11 @@
     "@rollup/plugin-commonjs": "^25.0.0",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
+    "eslint": "^8.41.0",
+    "eslint-config-google": "^0.14.0",
     "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
     "resize-observer-polyfill": "^1.5.1",
     "rimraf": "^5.0.1",
     "rollup": "^3.23.0",
@@ -51,12 +55,6 @@
   },
   "peerDependencies": {
     "vite": "^4.3.8"
-  },
-  "optionalDependencies": {
-    "eslint": "^8.41.0",
-    "eslint-config-google": "^0.14.0",
-    "lint-staged": "^13.2.2",
-    "prettier": "^2.8.8"
   },
   "lint-staged": {
     "*": [
