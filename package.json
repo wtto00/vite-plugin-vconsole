@@ -1,6 +1,6 @@
 {
   "name": "@wtto00/vite-plugin-vconsole",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vite plugin vconsole",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -11,7 +11,8 @@
       "types": "./types/index.d.ts",
       "require": "./dist/index.cjs",
       "import": "./dist/index.mjs"
-    }
+    },
+    "./dist/vconsole": "./dist/vconsole.js"
   },
   "files": [
     "dist",
