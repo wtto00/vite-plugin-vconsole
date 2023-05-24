@@ -44,7 +44,7 @@ export function viteVConsole(opt) {
       if (entryPath.includes(id) && enabledTruly) {
         const code =
           '/* eslint-disable */;' +
-          `import '${name}/dist/vconsole.js';` +
+          `import '${name}/dist/vconsole';` +
           `new VConsole({${parseVConsoleOptions(config)}});` +
           '/* eslint-enable */' +
           _source;
