@@ -22,10 +22,10 @@
 **vite version:** >=2.0.0
 
 ```bash
-pnpm add vite-plugin-vconsole -D
+pnpm add @wtto00/vite-plugin-vconsole -D
 # or
-# npm i vite-plugin-vconsole -D
-# yarn add vite-plugin-vconsole -D
+# npm i @wtto00/vite-plugin-vconsole -D
+# yarn add @wtto00/vite-plugin-vconsole -D
 ```
 
 ## 使用
@@ -136,12 +136,12 @@ export default ({ command, mode }: ConfigEnv): UserConfigExport => {
 
 ## 配置
 
-| 配置项       | 类型                                                                                                               | 是否必须 | 默认值 | 说明                                                          |
-| ------------ | ------------------------------------------------------------------------------------------------------------------ | -------- | ------ | ------------------------------------------------------------- |
-| entry        | `string \| string[]`                                                                                               | 是       | -      | 必须提供，支持多入口                                          |
-| localEnabled | boolean                                                                                                            | 否       | false  |                                                               |
-| enabled      | boolean                                                                                                            | 否       | true   |                                                               |
-| config       | [VConsoleOptions](https://github.com/Tencent/vConsole/blob/dev/doc/public_properties_methods_CN.md#vconsoleoption) | 否       | {}     | 传递给 [vconsole](https://github.com/Tencent/vConsole) 的属性 |
+| 配置项       | 类型                                                                                                                 | 是否必须 | 默认值 | 说明                                                          |
+| ------------ | -------------------------------------------------------------------------------------------------------------------- | -------- | ------ | ------------------------------------------------------------- |
+| entry        | `string \| string[]`                                                                                                 | 是       | -      | 必须提供，支持多入口                                          |
+| localEnabled | `boolean`                                                                                                            | 否       | false  |                                                               |
+| enabled      | `boolean`                                                                                                            | 否       | true   |                                                               |
+| config       | [`VConsoleOptions`](https://github.com/Tencent/vConsole/blob/dev/doc/public_properties_methods_CN.md#vconsoleoption) | 否       | {}     | 传递给 [vconsole](https://github.com/Tencent/vConsole) 的属性 |
 
 ## License
 
