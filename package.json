@@ -61,7 +61,7 @@
     "*": [
       "prettier --write --ignore-unknown"
     ],
-    "*.{js}": [
+    "*.js": [
       "eslint --fix --cache"
     ]
   }
