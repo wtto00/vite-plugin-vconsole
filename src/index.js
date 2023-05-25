@@ -45,7 +45,7 @@ export function viteVConsole(opt) {
         const code =
           '/* eslint-disable */;' +
           (resizeObserverPolyfill ? `import '${name}/dist/resizeObserverPolyfill';` : '') +
-          `import 'vconsole';` +
+          `import VConsole from 'vconsole';` +
           `new VConsole({${parseVConsoleOptions(config)}});` +
           '/* eslint-enable */' +
           _source;
