@@ -1,9 +1,11 @@
 lockfileVersion: '6.0'
 
+dependencies:
+  vconsole:
+    specifier: ^3.15.0
+    version: 3.15.0
+
 devDependencies:
-  '@rollup/plugin-commonjs':
-    specifier: ^25.0.0
-    version: 25.0.0(rollup@3.23.0)
   '@rollup/plugin-json':
     specifier: ^6.0.0
     version: 6.0.0(rollup@3.23.0)
@@ -34,9 +36,6 @@ devDependencies:
   rollup:
     specifier: ^3.23.0
     version: 3.23.0
-  vconsole:
-    specifier: ^3.15.0
-    version: 3.15.0
   vite:
     specifier: ^4.3.8
     version: 4.3.8
@@ -48,7 +47,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.11
-    dev: true
+    dev: false
 
   /@esbuild/android-arm64@0.17.19:
     resolution:
@@ -347,11 +346,6 @@ packages:
       wrap-ansi-cjs: /wrap-ansi@7.0.0
     dev: true
 
-  /@jridgewell/sourcemap-codec@1.4.15:
-    resolution:
-      {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==}
-    dev: true
-
   /@nodelib/fs.scandir@2.1.5:
     resolution:
       {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -383,25 +377,6 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
-
-  /@rollup/plugin-commonjs@25.0.0(rollup@3.23.0):
-    resolution:
-      {integrity: sha512-hoho2Kay9TZrLu0bnDsTTCaj4Npa+THk9snajP/XDNb9a9mmjTjh52EQM9sKl3HD1LsnihX7js+eA2sd2uKAhw==}
-    engines: {node: '>=14.0.0'}
-    peerDependencies:
-      rollup: ^2.68.0||^3.0.0
-    peerDependenciesMeta:
-      rollup:
-        optional: true
-    dependencies:
-      '@rollup/pluginutils': 5.0.2(rollup@3.23.0)
-      commondir: 1.0.1
-      estree-walker: 2.0.2
-      glob: 8.1.0
-      is-reference: 1.2.1
-      magic-string: 0.27.0
-      rollup: 3.23.0
-    dev: true
 
   /@rollup/plugin-json@6.0.0(rollup@3.23.0):
     resolution:
@@ -653,11 +628,6 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
-  /commondir@1.0.1:
-    resolution:
-      {integrity: sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==}
-    dev: true
-
   /concat-map@0.0.1:
     resolution:
       {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
@@ -667,13 +637,13 @@ packages:
     resolution:
       {integrity: sha512-PFM6BnjLnOON/lB3ta/Jg7Ywsv+l9kQGD4TWDCSlRBGmqnnTM5MrDkhAFgw+8HZt0wW6Q2BBE4cmy9sq+s9Qng==}
     engines: {node: '>=12'}
-    dev: true
+    dev: false
 
   /core-js@3.30.2:
     resolution:
       {integrity: sha512-uBJiDmwqsbJCWHAwjrx3cvjbMXP7xD72Dmsn5LOJpiRmE3WbBbN5rCqQ2Qh6Ek6/eOrjlWngEynBWo4VxerQhg==}
     requiresBuild: true
-    dev: true
+    dev: false
 
   /cross-spawn@7.0.3:
     resolution:
@@ -1032,18 +1002,6 @@ packages:
       path-is-absolute: 1.0.1
     dev: true
 
-  /glob@8.1.0:
-    resolution:
-      {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
-    engines: {node: '>=12'}
-    dependencies:
-      fs.realpath: 1.0.0
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 5.1.6
-      once: 1.4.0
-    dev: true
-
   /globals@13.20.0:
     resolution:
       {integrity: sha512-Qg5QtVkCy/kv3FUSlu4ukeZDVf9ee0iXLAUYX13gbR17bnejFTzr4iS9bY7kwCf1NztRNm1t91fjOiyx4CSwPQ==}
@@ -1183,13 +1141,6 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /is-reference@1.2.1:
-    resolution:
-      {integrity: sha512-U82MsXXiFIrjCK4otLT+o2NA2Cd2g5MLoOVXUZjIOhLurrRxpEXzI8O0KZHr3IjLvlAH1kTPYSuqer5T9ZVBKQ==}
-    dependencies:
-      '@types/estree': 1.0.1
-    dev: true
-
   /is-stream@3.0.0:
     resolution:
       {integrity: sha512-LnQR4bZ9IADDRSkvpqMGvt/tEJWclzklNgSw48V5EAaAeDd6qGvN8ei6k5p0tvxSR171VmGyHuTiAOfxAbr8kA==}
@@ -1319,14 +1270,6 @@ packages:
     engines: {node: 14 || >=16.14}
     dev: true
 
-  /magic-string@0.27.0:
-    resolution:
-      {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
-
   /merge-stream@2.0.0:
     resolution:
       {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -1360,14 +1303,6 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
-  /minimatch@5.1.6:
-    resolution:
-      {integrity: sha512-lKwV/1brpG6mBUFHtb7NUmtABCb2WZZmm2wNiOA5hAb8VdCS4B3dtMWyvcoViccwAW/COERjXLt0zP1zXUN26g==}
-    engines: {node: '>=10'}
-    dependencies:
-      brace-expansion: 2.0.1
-    dev: true
-
   /minimatch@9.0.1:
     resolution:
       {integrity: sha512-0jWhJpD/MdhPXwPuiRkCbfYfSKp2qnn2eOc279qI7f+osl/l+prKSrvhg157zSYvx/1nmgn2NqdT6k2Z7zSH9w==}
@@ -1390,7 +1325,7 @@ packages:
   /mutation-observer@1.0.3:
     resolution:
       {integrity: sha512-M/O/4rF2h776hV7qGMZUH3utZLO/jK7p8rnNgGkjKUw8zCGjRQPxB8z6+5l8+VjRUQ3dNYu4vjqXYLr+U8ZVNA==}
-    dev: true
+    dev: false
 
   /nanoid@3.3.6:
     resolution:
@@ -1585,7 +1520,7 @@ packages:
   /regenerator-runtime@0.13.11:
     resolution:
       {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
-    dev: true
+    dev: false
 
   /resize-observer-polyfill@1.5.1:
     resolution:
@@ -1854,7 +1789,7 @@ packages:
       copy-text-to-clipboard: 3.1.0
       core-js: 3.30.2
       mutation-observer: 1.0.3
-    dev: true
+    dev: false
 
   /vite@4.3.8:
     resolution:

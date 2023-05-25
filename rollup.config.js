@@ -1,5 +1,4 @@
 import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 
 /** @type {(import('rollup').RollupOptions)[]} */
@@ -11,14 +10,6 @@ const config = [
       {file: 'dist/index.cjs', format: 'cjs'},
     ],
     plugins: [json()],
-  },
-  {
-    plugins: [resolve(), commonjs()],
-    input: 'src/vconsole.js',
-    output: {
-      file: 'dist/vconsole.js',
-      format: 'iife',
-    },
   },
   {
     plugins: [resolve()],
