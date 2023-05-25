@@ -1,6 +1,6 @@
 {
   "name": "@wtto00/vite-plugin-vconsole",
-  "version": "1.1.1-alpha2",
+  "version": "1.1.1",
   "description": "vite plugin vconsole",
   "type": "module",
   "main": "./dist/index.cjs",
