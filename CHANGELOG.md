@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.2] - 2023-08-03
+
+### Fixed
+
+- 更新`vconsole`版本号为`3.15.1`(#15).
+
 ## [1.1.1] - 2023-05-25
 
 ### Fixed
