@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/wtto00/vite-plugin-vconsole#readme",
   "dependencies": {
-    "vconsole": "^3.15.0"
+    "vconsole": "^3.15.1"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.0.0",
