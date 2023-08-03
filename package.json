@@ -1,6 +1,6 @@
 {
   "name": "@wtto00/vite-plugin-vconsole",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "vite plugin vconsole",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/wtto00/vite-plugin-vconsole#readme",
   "dependencies": {
-    "vconsole": "^3.15.0"
+    "vconsole": "^3.15.1"
   },
   "devDependencies": {
     "@rollup/plugin-json": "^6.0.0",
