@@ -22,7 +22,7 @@
     "build": "rimraf dist && rollup -c",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint --fix --color src rollup.config.js",
-    "prepare": "husky install && husky set .husky/pre-commit \"npx lint-staged\""
+    "prepare": "husky && echo npx lint-staged > .husky/pre-commit"
   },
   "repository": {
     "type": "git",
