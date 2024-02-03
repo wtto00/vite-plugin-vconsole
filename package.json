@@ -22,7 +22,7 @@
     "build": "rimraf dist && rollup -c",
     "format": "prettier . --write --ignore-unknown",
     "lint": "eslint --fix --color src rollup.config.js",
-    "prepare": "husky install && husky set .husky/pre-commit \"npx lint-staged\""
+    "prepare": "husky && echo npx lint-staged > .husky/pre-commit"
   },
   "repository": {
     "type": "git",
@@ -46,7 +46,7 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "eslint": "^8.56.0",
     "eslint-config-google": "^0.14.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.0",
     "lint-staged": "^15.2.0",
     "prettier": "^3.2.4",
     "resize-observer-polyfill": "^1.5.1",
