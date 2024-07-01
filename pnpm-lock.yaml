@@ -50,7 +50,7 @@ importers:
         version: 7.14.1(eslint@9.5.0)(typescript@5.4.5)
       vite:
         specifier: ^5.3.1
-        version: 5.3.1
+        version: 5.3.2
 
 packages:
 
@@ -1102,8 +1102,8 @@ packages:
   vconsole@3.15.1:
     resolution: {integrity: sha512-KH8XLdrq9T5YHJO/ixrjivHfmF2PC2CdVoK6RWZB4yftMykYIaXY1mxZYAic70vADM54kpMQF+dYmvl5NRNy1g==}
 
-  vite@5.3.1:
-    resolution: {integrity: sha512-XBmSKRLXLxiaPYamLv3/hnP/KXDai1NDexN0FpkTaZXTfycHvkRHoenpgl/fvuK/kPbB6xAgoyiryAhQNxYmAQ==}
+  vite@5.3.2:
+    resolution: {integrity: sha512-6lA7OBHBlXUxiJxbO5aAY2fsHHzDr1q7DvXYnyZycRs2Dz+dXBWuhpWHvmljTRTpQC2uvGmUFFkSHF2vGo90MA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -2123,7 +2123,7 @@ snapshots:
       core-js: 3.37.1
       mutation-observer: 1.0.3
 
-  vite@5.3.1:
+  vite@5.3.2:
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.38
